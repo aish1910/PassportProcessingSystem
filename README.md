@@ -25,7 +25,7 @@ Calculate the total time taken by the passport officials to process all applicat
 
 Two solutions are proposed to solve the above problem.
 
-*Approach 1(Round Robin)
+<h3>Approach 1(Round Robin):</h3>
  Since the question does not state to compute the minimum/ideal time to process all applications but just average/total time, we use a round  robin approach. Here, the persons arriving are arranged in a round-robin fashion. For eg, when the first 20 persons arrive at 9.00 am, they are arranged as follows:(taking only the first 6 persons for the purpose of this example.
  
  * Candidate 1 -> Counter 1
@@ -44,13 +44,13 @@ Two solutions are proposed to solve the above problem.
  This approach gives `14hours and 2 min` as the total time taken to process passport applications of all candidates
  
 
-*Approach 2(Allocating more persons to the counters which complete the task faster)
+<h3>Approach 2(Allocating more persons to the counters which complete the task faster)</h3>
 
 In this Approach, we try to allocate more persons to a counter which processes the applications faster. For eg, the processing time of counter 2 in Step#1(Application Submission) is 2 min, but the processing times of the other two are 4 min.
 
-No of persons processed by counter1 in 15 min : 15/4 = 3 persons
-No of persons processed by counter2 in 15 min : 15/2 = 7 persons
-No of persons processed by counter3 in 15 min : 15/4 = 3 persons
+No of persons processed by counter1 in 15 min : 15/4 = 3 persons<br/>
+No of persons processed by counter2 in 15 min : 15/2 = 7 persons<br/>
+No of persons processed by counter3 in 15 min : 15/4 = 3 persons<br/>
 
 So as illustrated above, counter2 processes 7 persons in the first 15 min whereas counter1 and counter3 can process just 3.
 
