@@ -10,7 +10,7 @@ In a typical passport office, the following tasks will be carried out for proces
 
 There are 3 officers assigned for each of the above tasks, hence a total of 9 officers. The below table illustrates the time taken by each officer to process a given step.
 
-
+[[https://github.com/aish1910/PassportProcessingSystem/blob/master/src/images/Input.png|alt=Input]]
 
 Candidates arrive at the passport office at 9 am in periodic interval of 15 min as illustrated below
 
