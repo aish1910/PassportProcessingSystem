@@ -58,7 +58,7 @@ At the end of 15 min, 13 persons are processed in Step#1 and they move to Step#2
 
 We compute the total time taken at each step based on the the persons remaining at the end of every 15 min and the new set of peope arriving after 15 min.
 
-We compute the total time taken as the maximum of the time taken for processing all candidates(total of 115) at each step.
+The total time taken for completing all steps is computed as the maximum of the time taken for processing all candidates(total of 115) at each step.
 
   `TotalTimeTaken = MAX(totalTimeForApplicationSubmission, totalTimeForDocumentVerification, totalTimeForBioMetrics);`
   
