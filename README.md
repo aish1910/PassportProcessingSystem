@@ -46,7 +46,7 @@ Two solutions are proposed to solve the above problem.
  
  We compute max of all times because we assume that <b>all 3 tasks happen simultaneously</b>. i.e candidates who have completed Application submission, immediately go to document verification, meaning the 3 tasks happen parallely.
  
- This approach gives `14hours and 2 min` as the total time taken to process passport applications of all candidates</li>
+ This approach gives <b>`14hours and 2 min`</b> as the total time taken to process passport applications of all candidates</li>
  
 <li>
 <h3>APPROACH 2(Allocating more persons to the counters which complete the task faster)</h3>
@@ -69,7 +69,7 @@ We compute the total time taken at each step based on the the persons remaining 
 
   `TotalTimeTaken = MAX(totalTimeForApplicationSubmission, totalTimeForDocumentVerification, totalTimeForBioMetrics);`
   
-This approach gives `5hours and 45 min` as the total time taken to process passport applications of all candidates.</li>
+This approach gives <b>`5hours and 45 min`</b> as the total time taken to process passport applications of all candidates.</li>
 </ul>
 
 <h3>NOTE:</h3><b>Approach 2 is better than Approach 1 since it allocates more persons to the counters which complete the task faster. Approach 2 is suggested as the optimised solution to solve this problem</b>
