@@ -29,6 +29,7 @@ Calculate the total time taken by the passport officials to process all applicat
 
 Two solutions are proposed to solve the above problem.
 
+<ul><li>
 <h3>APPROACH 1(Round Robin):</h3>
  Since the question does not state to compute the <b>minimum/ideal time</b> to process all applications but just <b>average total time</b>, we use a <b>round  robin</b> approach. Here, the persons arriving are arranged in a round-robin fashion. For eg, when the first 20 persons arrive at 9.00 am, they are arranged as follows:(taking only the arrangement of the first 6 persons below for the purpose of this example.)
  
@@ -45,9 +46,9 @@ Two solutions are proposed to solve the above problem.
  
  We compute max of all times because we assume that <b>all 3 tasks happen simultaneously</b>. i.e candidates who have completed Application submission, immediately go to document verification, meaning the 3 tasks happen parallely.
  
- This approach gives `14hours and 2 min` as the total time taken to process passport applications of all candidates
+ This approach gives `14hours and 2 min` as the total time taken to process passport applications of all candidates</li>
  
-
+<li>
 <h3>APPROACH 2(Allocating more persons to the counters which complete the task faster)</h3>
 
 <p>In this Approach, we try to <b><i>allocate more persons to a counter which processes the applications faster</i></b>. For eg, the processing time of <b>counter 2</b> in Step#1(Application Submission) is <b>2 min</b>, but the processing times of the other two are <b>4 min</b>.
@@ -68,6 +69,7 @@ We compute the total time taken at each step based on the the persons remaining 
 
   `TotalTimeTaken = MAX(totalTimeForApplicationSubmission, totalTimeForDocumentVerification, totalTimeForBioMetrics);`
   
-This approach gives `5hours and 45 min` as the total time taken to process passport applications of all candidates.
+This approach gives `5hours and 45 min` as the total time taken to process passport applications of all candidates.</li>
+</ul>
 
 <h3>NOTE:</h3><b>Approach 2 is better than Approach 1 since it allocates more persons to the counters which complete the task faster. Approach 2 is suggested as the optimised solution to solve this problem</b>
