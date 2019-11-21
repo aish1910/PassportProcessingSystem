@@ -12,14 +12,14 @@ There are 3 officers assigned for each of the above tasks, hence a total of 9 of
 
 ![](https://github.com/aish1910/PassportProcessingSystem/blob/master/src/images/Input.png)
 
-Candidates arrive at the passport office at 9 am in periodic interval of 15 min as illustrated below
+Candidates start arriving at the passport office from 9 am onwards in periodic interval of 15 min as illustrated below
 
 * 20 persons at 9.00 am
 * 30 persons at 9.15 am
 * 20 persons at 9.30 am
 * 45 persons at 9.45 am
 
-Calculate the total time taken by the passport officials to process all applications.
+Calculate the total time taken by the passport officials to process all applications for all candidates.
 
 <h3>High Level Design</h3>
 
@@ -29,8 +29,8 @@ Calculate the total time taken by the passport officials to process all applicat
 
 Two solutions are proposed to solve the above problem.
 
-<h3>Approach 1(Round Robin):</h3>
- Since the question does not state to compute the minimum/ideal time to process all applications but just average/total time, we use a round  robin approach. Here, the persons arriving are arranged in a round-robin fashion. For eg, when the first 20 persons arrive at 9.00 am, they are arranged as follows:(taking only the first 6 persons for the purpose of this example.
+<h3>APPROACH 1(Round Robin):</h3>
+ Since the question does not state to compute the <b>minimum/ideal time</b> to process all applications but just <b>average total time</b>, we use a <b>round  robin</b> approach. Here, the persons arriving are arranged in a round-robin fashion. For eg, when the first 20 persons arrive at 9.00 am, they are arranged as follows:(taking only the arrangement of the first 6 persons below for the purpose of this example.)
  
  * Candidate 1 -> Counter 1
  * Candidate 2 -> Counter 2
@@ -39,30 +39,32 @@ Two solutions are proposed to solve the above problem.
  * Candidate 5 -> Counter 2
  * Candidate 6 -> Counter 3 etc.
  
- We compute the total time taken for processing all candidates( 115 in total ), at each of the 3 steps. Finally we compute the maximum of all times as illustrated below:
+ We compute the total time taken for processing all candidates( 115 in total ), at each of the 3 steps. Finally we compute the <b>maximum of all times</b> as illustrated below:
  
  `TotalTimeTaken = MAX(totalTimeForApplicationSubmission, totalTimeForDocumentVerification, totalTimeForBioMetrics);`
  
- We compute max of all times because we assume that all 3 tasks happen simultaneously. i.e candidates who have completed Application submission, immediately go to document verification, meaning the 3 tasks happen parallely.
+ We compute max of all times because we assume that <b>all 3 tasks happen simultaneously</b>. i.e candidates who have completed Application submission, immediately go to document verification, meaning the 3 tasks happen parallely.
  
  This approach gives `14hours and 2 min` as the total time taken to process passport applications of all candidates
  
 
-<h3>Approach 2(Allocating more persons to the counters which complete the task faster)</h3>
+<h3>APPROACH 2(Allocating more persons to the counters which complete the task faster)</h3>
 
-In this Approach, we try to allocate more persons to a counter which processes the applications faster. For eg, the processing time of counter 2 in Step#1(Application Submission) is 2 min, but the processing times of the other two are 4 min.
+<p>In this Approach, we try to <b><i>allocate more persons to a counter which processes the applications faster</i></b>. For eg, the processing time of <b>counter 2</b> in Step#1(Application Submission) is <b>2 min</b>, but the processing times of the other two are <b>4 min</b>.
 
-No of persons processed by counter1 in 15 min : 15/4 = 3 persons<br/>
-No of persons processed by counter2 in 15 min : 15/2 = 7 persons<br/>
-No of persons processed by counter3 in 15 min : 15/4 = 3 persons<br/>
+```
+No of persons processed by counter1 in 15 min : 15/4 = 3 persons
+No of persons processed by counter2 in 15 min : 15/2 = 7 persons
+No of persons processed by counter3 in 15 min : 15/4 = 3 persons
+```
 
-So as illustrated above, counter2 processes 7 persons in the first 15 min whereas counter1 and counter3 can process just 3.
+So as illustrated above, <b>counter2</b> processes <b>7</b> persons in the first 15 min whereas <b>counter1 and counter3</b> can process just <b>3</b>.
 
-At the end of 15 min, 13 persons are processed in Step#1 and they move to Step#2. The remaining 7 persons wait for their turn in Step#1 and they are followed by the new set of 30 persons who arrive at that time.
+At the end of 15 min, <b>13</b> persons are processed in Step#1 and they move to Step#2. The remaining <b>7</b> persons wait for their turn in Step#1 and they are followed by the new set of <b>30</b> persons who arrive at that time.
 
 We compute the total time taken at each step based on the the persons remaining at the end of every 15 min and the new set of peope arriving after 15 min.
 
-The total time taken for completing all steps is computed as the maximum of the time taken for processing all candidates(total of 115) at each step.
+<b><i>The total time taken for completing all steps is computed as the maximum of the time taken for processing all candidates(total of 115) at each step.</i></b></p>
 
   `TotalTimeTaken = MAX(totalTimeForApplicationSubmission, totalTimeForDocumentVerification, totalTimeForBioMetrics);`
   
