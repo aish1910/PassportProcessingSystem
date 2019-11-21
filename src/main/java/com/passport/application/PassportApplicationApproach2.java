@@ -17,8 +17,9 @@ import java.util.Collections;
  * <b>Assumptions/Prerequisites considered</b>
  * </p>
  * <ul>
- * <li>Given that more number of candidates go to the counters where the
+ * <li>More number of candidates go to the counters where the
  * applications are processed faster/in lesser execution times</li>
+ * <li>All 3 tasks(Application submissin, doc verification and biometrics) happen simultaneously</li>
  * </ul>
  *
  */
