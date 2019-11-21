@@ -30,7 +30,7 @@ Calculate the total time taken by the passport officials to process all applicat
 Two solutions are proposed to solve the above problem.
 
 <ul><li>
- <h3>APPROACH 1</h3><h4>(Round Robin):</h4>
+ <h3>APPROACH 1<h4>(Round Robin):</h4></h3>
  Since the question does not state to compute the <b>minimum/ideal time</b> to process all applications but just <b>average total time</b>, we use a <b>round  robin</b> approach. Here, the persons arriving are arranged in a round-robin fashion. For eg, when the first 20 persons arrive at 9.00 am, they are arranged as follows:(taking only the arrangement of the first 6 persons below for the purpose of this example.)
  
  * Candidate 1 -> Counter 1
